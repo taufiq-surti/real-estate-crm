@@ -1,0 +1,4 @@
+vendor/
+logs/*.log
+.installed.lock
+.env

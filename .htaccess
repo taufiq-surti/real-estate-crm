@@ -1,0 +1,14 @@
+RewriteEngine On
+
+# Preserve existing files and folders
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Pretty URL for project pages: /project/{slug}
+RewriteRule ^project/([a-zA-Z0-9-]+)/?$ project/index.php?slug=$1 [L,QSA]
+
+# Optional short routes for admin sections
+RewriteRule ^admin/?$ admin/dashboard.php [L,QSA]
+RewriteRule ^superadmin/?$ superadmin/dashboard.php [L,QSA]
+RewriteRule ^agent/?$ agent/dashboard.php [L,QSA]

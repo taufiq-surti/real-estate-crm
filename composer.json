@@ -1,0 +1,13 @@
+{
+  "name": "paradisegroup/real-estate-crm",
+  "description": "Real estate lead generation SaaS website + CRM",
+  "type": "project",
+  "require": {
+    "php": ">=8.1",
+    "phpmailer/phpmailer": "^6.9"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}
